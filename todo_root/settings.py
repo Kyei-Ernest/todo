@@ -95,7 +95,7 @@ AUTH_USER_MODEL = 'user_auth.User'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASE_URL = postgresql://mydb_6a6s_user:zFHdcvUZPv0t5akElVhmgjdWKiHfQnJC@dpg-d3p5n3je5dus738gi730-a/mydb_6a6s
+DATABASE_URL = "postgresql://mydb_6a6s_user:zFHdcvUZPv0t5akElVhmgjdWKiHfQnJC@dpg-d3p5n3je5dus738gi730-a/mydb_6a6s"
 
 
 DATABASES = {
@@ -154,3 +154,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-secret-for-local')
 
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+
