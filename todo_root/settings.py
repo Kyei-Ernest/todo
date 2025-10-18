@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-m+v7v#%fzc1$csaoy&d5$(zton1kunbdt_7u^o3qog-wf1qsz#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['todo.onrender.com']
+ALLOWED_HOSTS = [*]
 
 # Application definition
 
@@ -154,4 +154,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-secret-for-local')
 
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+
 
