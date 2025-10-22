@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    command: gunicorn todo_root.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    working_dir: /app
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
